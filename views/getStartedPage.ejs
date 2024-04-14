@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started - EmployeeNet</title>
+    <link rel="stylesheet" href="newResponsiveHomepage.css">
+    <link rel="Webpage Icon" href="/PSIT_logo_green.svg" style="fill: green;">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <style>
+        .link-spacing {
+            margin-right: 20px; /* Adjust the value as needed for your desired spacing */
+        }
+        body{
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="/"><img src=".//PSIT_logo_green.svg" alt="psit-logo" id="psit-logo"></a>
+            <h1><u>Employee</u><u class="ul"><span>Net</u></span></h1>
+            <!-- Navigation links here -->
+        </nav>
+
+        <div class="text-box">
+            <h1>Get Started with EmployeeNet</h1>
+            <p>
+                Begin your journey with EmployeeNet and stay connected with your Company.
+            </p>
+            <!-- "Get Started" button here -->
+            <div class="get-started-links">
+                <!-- Add two links side by side -->
+                <button class="hero-btn" onclick="location.href='/register'">Register</button>
+                <span class="link-spacing"></span>
+                <button class="hero-btn" onclick="location.href='/login'">Login</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Your content for the "Get Started" page here -->
+
+    <script>
+       window.addEventListener('popstate', function(event) {
+    // Force a full page reload
+    location.href = location.href;
+});
+// Add an event listener for the popstate event
+window.addEventListener('popstate', function(event) {
+    // Check if there's a valid state object
+    if (event.state !== null) {
+        // Reload the previous page
+        window.location.href = document.referrer;
+    }
+});
+
+// Push an initial state to the history stack when the page loads
+history.pushState({ page: 'initial' }, document.title, window.location.href);
+
+
+    </script>
+</body>
+</html>
