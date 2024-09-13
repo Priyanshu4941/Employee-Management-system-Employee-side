@@ -394,6 +394,8 @@ app.get('/resendMail', (req, res) => {
     // Send the email with the customized content
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
+            console.log(error);
+            
             console.error('Error sending email:', error);
             res.redirect("/hehe");
         } else {
